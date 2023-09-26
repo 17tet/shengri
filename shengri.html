@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>hb</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            overflow: hidden;
+        }
+
+        #cake-container {
+            position: relative;
+        }
+
+        #birthday-text {
+            font-size: 48px;
+            position: relative;
+            top: 0;
+            left: 50%;
+            transform: translateY(+160%);
+            opacity: 0;
+            animation: fade-in 3s ease-in-out forwards;
+        }
+
+        @keyframes fade-in {
+            0% {
+                opacity: 0;
+            }
+            100% {
+                opacity: 1;
+            }
+        }
+
+        #gateaux {
+            position: absolute;
+            top: +20%;
+            left: +10%;
+            width: 50%; 
+            height: 50%;
+            animation: spin 5s linear infinite;
+        }
+
+        @keyframes spin {
+            0% {
+                transform: rotate(0deg);
+            }
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div id="cake-container">
+        <img src="dangao.png" alt="蛋糕图片">
+        <div id="birthday-text">JOYEUX ANNIV VINCENT !</div>
+        <img id="gateaux" src="gateaux.png" alt="蛋糕图片">
+    </div>
+    <script>
+        window.onload = function() {
+            var birthdayText = document.getElementById("birthday-text");
+            birthdayText.style.animation = "fade-in 2s ease-in-out forwards";
+        };
+    </script>
+</body>
+</html>
